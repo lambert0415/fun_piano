@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>piano</title>
+    <style>
+        @import "./index.css";
+    </style>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+
+	<ul id="all">
+		<li>C3</li>
+		<li>D3</li>
+		<li>E3</li>
+		<li>F3</li>
+		<li>G3</li>
+		<li>A3</li>
+		<li>B3</li>
+		<li>C4</li>
+		<li>D4</li>
+		<li>E4</li>
+		<li>F4</li>
+		<li>G4</li>
+		<li>A4</li>
+		<li>B4</li>
+		<li>C5</li>
+		<li>D5</li>
+		<li>E5</li>
+		<li>F5</li>
+		<li>G5</li>
+		<li>A5</li>	
+		<li>B5</li>	
+		<li>C6</li>	
+		<li>D6</li>
+		
+		<li id="#C3" class="black" style="left:24px;">C3u</li>
+		<li id="#D3" class="black" style="left:65px;">uD3</li>
+		<li id="#F3" class="black" style="left:150px;">uF3</li>
+		<li id="#G3" class="black" style="left:192px;">uG3</li>
+		<li id="#A4" class="black" style="left:234px;">uA3</li> 
+		<li id="#C4" class="black" style="left:318px;">uC4</li>
+		<li id="#D4" class="black" style="left:360px;">uD4</li>
+ 
+		<li id="#F4" class="black" style="left:444px;">uF4</li>
+		<li id="#G4" class="black" style="left:486px;">uG4</li>
+		<li id="#A4" class="black" style="left:528px;">uA4</li>
+ 
+		<li id="#C5" class="black" style="left:612px;">uC5</li>
+		<li id="#D5" class="black" style="left:654px;">uD5</li>
+		<li id="#F5" class="black" style="left:738px;">uF5</li>
+
+		<li id="#C5" class="black" style="left:780px;">uG5</li>
+		<li id="#D5" class="black" style="left:822px;">uA5</li>
+		<li id="#F5" class="black" style="left:906px;">uC6</li>
+
+	</ul>
+	<script type="text/javascript">
+	//mouse event
+	$('li').mousedown(function(){
+		//get the file directory
+		var src = "./music/"+$(this).html()+'.MP3';
+		//audio object
+		var audio = new Audio(src);
+
+		audio.play();
+		//press key class chages
+		$(this).addClass('press');
+		
+	})
+	//mouse event up
+	$('li').mouseup(function(){
+        //reset to original class
+
+            $(this).removeClass('press');
+	})
+ 
+	//mouseover  mouseout
+	$('li').hover(function(){
+        $(this).css('cursor','pointer');
+	},function(){
+		$(this).css('cursor','default')
+	})
+ 
+	
+ 
+	</script>
+</body>
+</html>

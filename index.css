@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+*{margin:0px;padding:0px;list-style:none;}
+
+canvas { background: rgba(255, 255, 255, 0.651); 
+        z-index: 100;
+}
+
+#all {  
+        
+        width:1000px;
+        height:300px;
+        border:solid 0px  #333;
+        margin:100px auto;
+        position:relative;
+     }
+
+body {
+        background:url(./images/timg.jpeg);
+     }
+
+li   {
+        width:4%;
+        height:100%;
+        background:#fff;
+        float:left;
+        border-right:solid 2px black;
+        border-radius:0px 0px 10px 10px;
+        text-align:center;
+        line-height:570px;
+        font-style: italic;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:13px;
+        color: slategray;
+    }
+
+.press{
+        transform: scale(1.1) translateY(10px) skewY(2.5deg);
+
+}
+ 
+li:hover{
+        background:-webkit-linear-gradient(top,rgba(6, 230, 6, 0.651),rgba(7, 190, 245, 0.63));
+        transition: background 0.7s ease-out;
+        
+}
+.black {
+        width:3%;
+        height:60%;
+        background:black;
+        border-radius:0px 0px 10px 10px;
+        left:10px;
+        top:0px;
+        position:absolute;
+        line-height: 340px;
+        font-style: italic;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:11px;
+        color:rgba(255, 0, 0, 0);
+        }
+        
+       
